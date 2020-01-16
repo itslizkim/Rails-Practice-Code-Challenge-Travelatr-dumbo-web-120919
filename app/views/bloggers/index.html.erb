@@ -1,0 +1,13 @@
+<div>
+    <h1> Welcome</h1>
+    <button class="btn btn-info" style="margin: 1em"><a href="/bloggers/new">New Blogger</a></button>
+
+
+    <%@bloggers.each do |blogger|%>
+        <h3><%= link_to blogger.name, blogger_path(blogger.id)%></h3>
+        <h4> Age: <%= blogger.age%> </h4>
+        <h4> Bio: <%= blogger.bio%> </h4>
+        <hr>
+    <%end%>
+
+</div>

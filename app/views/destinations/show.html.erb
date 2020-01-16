@@ -1,0 +1,13 @@
+<div>
+    <h1> <%= @destination.name %> </h1>
+    <h2> <%= @destination.country %> </h2>
+
+    <p>Most Recent: <%@most_recent.each do |post|%></p>
+            <%= link_to post.title, post_path(post.id)%> 
+        <%end %>
+
+    <h3>Average Age: <%= @average_age%> </h3>    
+    
+
+    <span><%= button_to "Delete Destination", destination_path(@destination.id), :method => :delete %></span>
+</div>

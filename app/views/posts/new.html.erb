@@ -1,0 +1,8 @@
+<h2>New Post</h2>
+<%=render "form"%>
+
+<%if flash[:errors]%>
+    <% flash[:errors].each do |message|%>
+		<%=message%>
+	<%end%>
+<%end%>
